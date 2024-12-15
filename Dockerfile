@@ -10,9 +10,9 @@ USER node
 
 COPY --chown=node:node . .
 
-RUN chmod +x ./build/render-build.sh && ./build/render-build.sh
-RUN chmod +x ./build/render-start.sh 
+RUN chmod +x ./bin/render-build.sh && ./bin/render-build.sh
+RUN chmod +x ./bin/render-start.sh 
 
 EXPOSE 3333
 
-CMD ["./build/render-start.sh"]
+CMD ["./bin/render-start.sh"]
